@@ -117,6 +117,9 @@ The first launch creates a `config.json` file. Edit it directly, then use the tr
   "auto_open_on_no_app": true,
   "md_disable_first_para_indent": true,
   "html_disable_first_para_indent": true,
+  "html_formatting": {
+    "strikethrough_to_del": true,
+  },
   "move_cursor_to_end": true,
   "language": "zh"
 }
@@ -134,6 +137,8 @@ Key fields:
 - `excel_keep_format` — attempt to preserve bold/italic/code styles inside Excel.
 - `auto_open_on_no_app` — auto-create a document and open it with the default handler when no target app is detected.
 - `md_disable_first_para_indent` / `html_disable_first_para_indent` — normalize the first paragraph style to body text.
+- `html_formatting` — options for formatting HTML rich text before conversion.
+  - `strikethrough_to_del` — convert strikethrough ~~ to `<del>` tags for proper rendering.
 - `move_cursor_to_end` — move the caret to the end of the inserted result.
 - `language` — UI language, `en` or `zh`.
 
@@ -146,6 +151,7 @@ Key fields:
 - Toggle notifications, automatic document creation when no target app is found, and cursor movement to the end after paste.
 - Enable or disable Excel-specific features and formatting preservation.
 - Toggle keeping generated DOCX files.
+- HTML Formatting: toggle conversion of strikethrough ~~ to `<del>` tags for proper rendering.
 - Open save directory, view logs, edit configuration, or reload hotkeys.
 - Check for updates and view installed version.
 - Quit PasteMD.
